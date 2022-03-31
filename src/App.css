@@ -1,38 +1,136 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 100vh;
+}
+.info-container {
+  padding: 25px;
 }
 
-.App-link {
-  color: #61dafb;
+.info-container h1 {
+  color: #fff;
+  text-align: left;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.info-container p {
+  color: hsl(214, 9%, 45%);
+  line-height: 1.5;
+  text-align: left;
+}
+
+.container {
+  width: 400px;
+  border-radius: 45px;
+  height: 420px;
+  background-color: hsl(213, 19%, 18%);
+}
+
+.star-container {
+  background-color: hsl(213, 20%, 22%);
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 55px;
+  height: 55px;
+}
+
+.ratings-container {
+  display: flex;
+  justify-content: space-between;
+}
+.input-container {
+  position: relative;
+}
+
+.ratings-container .number {
+  background-color: hsl(213, 20%, 22%);
+  border-radius: 100%;
+  cursor: pointer;
+  border: none;
+  color: hsl(214, 10%, 45%);
+  align-items: center;
+  display: flex;
+  transition: all 0.5s ease-in-out;
+  justify-content: center;
+  width: 55px;
+  height: 55px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  visibility: hidden;
+  position: absolute;
+}
+input[type="radio"] + label:before {
+  content: " ";
+  width: 55px;
+  height: 55px;
+  margin-right: 2px;
+  display: inline-block;
+  vertical-align: baseline;
+  background-color: hsl(213, 20%, 22%);
+  border-radius: 100%;
+  position: relative;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  color: hsl(214, 10%, 45%);
+  transition: all 0.5s ease-in-out;
+}
+
+.number-value {
+  top: 0 !important;
+  color: #fff;
+  position: absolute;
+  left: 0;
+  transform: translate(300%, 100%);
+}
+
+input[type="radio"]:checked + label:before {
+  background-color: hsl(25, 97%, 53%);
+  color: #fff;
+}
+
+input[type="radio"]:checked + .number-value {
+  color: #fff;
+}
+
+.submit-button {
+  display: block;
+  width: 100%;
+  margin-top: 25px;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  padding-top: 12px;
+  border-radius: 40px;
+  padding-bottom: 12px;
+}
+
+.submit-button:hover {
+  color: hsl(25, 97%, 53%);
+}
+
+/* thank you page styles */
+
+.selected-rating-container {
+  margin-top: 30px;
+  background-color: hsl(214, 3%, 41%);
+  border-radius: 20px;
+  padding: 7px;
+  display: inline-block;
+  color: hsl(25, 97%, 53%);
+}
+
+.thank-you-title h1 {
+  color: #fff;
+  text-align: center;
+}
+
+.thank-you-description {
+  color: #fff;
+  text-align: center;
 }
