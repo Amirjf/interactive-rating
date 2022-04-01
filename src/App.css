@@ -85,6 +85,7 @@ input[type="radio"] + label:before {
   top: 0 !important;
   color: #fff;
   position: absolute;
+  cursor: pointer;
   left: 0;
   transform: translate(300%, 100%);
 }
